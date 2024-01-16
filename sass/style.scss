@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #333;
+
+}
+
+div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.long{
+    border:2px solid black;
+    width: 800px;
+    height: 60px;
+    top: 50px;
+    left: calc(50% - 400px);
+    background-color: red;
+    transition: .5s linear;
+}
+
+.rectangle{
+    width: 300px;
+    height: 60px;
+    top:300px;
+    border-radius: 10px;
+
+}
+
+.short{
+    border:2px solid black;
+    background-color: blue;
+    top: 180px; 
+    left: calc(50% - 150px);
+    border-radius: 25px;
+    transition: 1s linear;
+      
+}
+
+.short2{
+    border:2px solid black;
+    background-color: yellow;
+    left:calc(25% - 150px);
+    transition: 1s ease-out 1s;
+}
+
+.short3{
+    border:2px solid black;
+    background-color: lime;
+    left: calc(75% - 150px);
+    transition: 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1s;
+}
+
+.center{
+    border:2px solid black;
+    background-color: transparent;
+}
+
+.long:hover{
+    scale: 2; background-color: orange;
+    width: 400px;
+    left: calc(50% - 200px);
+}
+
+.short:hover{
+    transform: rotate(360deg);
+}
+
+.short:hover ~ .short2{
+    transform: rotate(-360deg);
+}
+
+.short:hover ~ .short3{
+    transform: rotate(360deg);
+}
+
+.center{
+    height: 200px;
+    width: 400px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.center:hover{
+    background-color: white;
+}
